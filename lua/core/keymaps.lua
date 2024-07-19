@@ -1,23 +1,31 @@
+-- Set mapleader and maplocalleader
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
-vim.cmd("set expandtab")
-vim.cmd("set shiftwidth=2")
-vim.cmd("set softtabstop=2")
-vim.cmd("set tabstop=2")
-
+-- Set options using Lua style
+vim.opt.expandtab = true
+vim.opt.shiftwidth = 2
+vim.opt.softtabstop = 2
+vim.opt.tabstop = 2
+vim.opt.cursorline = true
+vim.opt.backup = false
+vim.opt.wrap = false
+vim.opt.incsearch = true
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+vim.opt.showmatch = true
+vim.opt.hlsearch = true
+vim.opt.history = 1000
 vim.opt.autowrite = true
+vim.opt.number = true
 vim.opt.backspace = "2"
 vim.opt.laststatus = 2
 vim.opt.shiftround = true
 vim.opt.showcmd = true
 
-vim.keymap.set("i", "jj", "<esc>")
-vim.keymap.set("v", "jk", "<esc>")
-
-vim.keymap.set("n", "<c-s>", ":w<CR>")
-
-vim.keymap.set("n", "<leader>c", ":<esc>")
+-- Key mappings
+vim.keymap.set("i", "jj", "<Esc>")
+vim.keymap.set("v", "jk", "<Esc>")
+vim.keymap.set("n", "<C-s>", ":w<CR>")
 vim.keymap.set("n", "<leader>q", ":q<CR>")
-vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>")
 vim.keymap.set("n", "<leader>r", ":source ~/.config/nvim/init.lua<CR>")

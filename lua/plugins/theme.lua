@@ -1,11 +1,10 @@
 -- Theme
 return {
-  "folke/tokyonight.nvim",
-  lazy = false,
+  "catppuccin/nvim",
   priority = 1000,
-  name = "tokyonight",
+  name = "catppuccin",
   config = function()
-    require("tokyonight").setup()
-    vim.cmd.colorscheme("tokyonight-moon")
+    require("catppuccin").setup()
+    vim.cmd.colorscheme("catppuccin")
   end,
 }
